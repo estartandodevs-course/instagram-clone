@@ -1,0 +1,42 @@
+@import "../styles.scss";
+
+%action-icons {
+  width: 24px;
+  height: auto;
+  cursor: pointer;
+  margin: 0 15px;
+}
+
+header {
+  @include simple-flex(space-between, center, row);
+  width: 100%;
+  padding: 10px 0 6px;
+  background-color: $background-secondary;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid #e2e2e2;
+
+  .logo-img {
+    width: 105px;
+    height: auto;
+  }
+
+  .action-icon {
+    @extend %action-icons;
+  }
+}
+
+.tab-bar {
+  @include simple-flex(space-between, center, row);
+  width: 100%;
+  background-color: $background-secondary;
+  position: fixed;
+  bottom: 0;
+  padding: 10px 0;
+  border-top: 1px solid #e2e2e2;
+
+  .action-icon {
+    @extend %action-icons;
+    width: 22px;
+  }
+}
