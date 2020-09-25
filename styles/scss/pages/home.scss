@@ -1,18 +1,11 @@
 @import "../styles.scss";
 
-%action-icons {
-  width: 24px;
-  height: auto;
-  cursor: pointer;
-  margin: 0 15px;
-}
-
 header {
   @include simple-flex(space-between, center, row);
   width: 100%;
   padding: 10px 0 6px;
   background-color: $background-secondary;
-  position: fixed;
+  position: sticky;
   top: 0;
   border-bottom: 1px solid #e2e2e2;
 
@@ -26,17 +19,157 @@ header {
   }
 }
 
-.tab-bar {
-  @include simple-flex(space-between, center, row);
-  width: 100%;
-  background-color: $background-secondary;
-  position: fixed;
-  bottom: 0;
-  padding: 10px 0;
-  border-top: 1px solid #e2e2e2;
+main {
+  @include simple-flex(flex-start, center, column);
 
-  .action-icon {
-    @extend %action-icons;
-    width: 22px;
+  .stories-container {
+    display: flex;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: auto;
+    padding: 9px 0 8px;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+      display: none;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background-color: $background-secondary;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #c7c7c7;
+      border-radius: 5px;
+    }
+
+    .story-item {
+      display: flex;
+      flex-direction: column;
+      padding: 0 10px;
+
+      .story-img {
+        @include box-round(62px);
+      }
+
+      .story-author {
+        color: $text-color;
+        font-size: 12px;
+        font-family: Arial;
+        text-align: center;
+        margin-top: 5px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  .feed-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .card-post {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0;
+
+      .card-header {
+        display: flex;
+        padding: 11px 10px;
+
+        .author-img {
+          @include box-round(32px);
+        }
+
+        .author-infos {
+          margin-left: 10px;
+
+          .author-name {
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 2px;
+          }
+
+          .author-location {
+            font-size: 11px;
+          }
+        }
+
+        .more-icon {
+          cursor: pointer;
+          height: 4px;
+          align-self: center;
+          margin-left: auto;
+        }
+      }
+
+      .post-img {
+        width: 100%;
+        min-height: 375px;
+        height: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+
+      .post-infos {
+        padding: 13px 15px 10px;
+
+        .post-actions {
+          display: flex;
+
+          .action-icon {
+            width: auto;
+            height: 20px;
+            cursor: pointer;
+            margin: 0 8px;
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            &:last-child {
+              margin-left: auto;
+              margin-right: 0;
+            }
+          }
+        }
+
+        .likes-info {
+          display: flex;
+          align-items: center;
+          padding: 10px 0 6px;
+
+          .people-like-img {
+            @include box-round(17px);
+          }
+
+          .likes-quantity {
+            margin-left: 6px;
+            font-size: 13px;
+            font-family: Arial;
+
+            .text-bold {
+              font-weight: 600;
+            }
+          }
+        }
+
+        .post-caption {
+          font-size: 13px;
+          font-family: Arial;
+
+          .author-name {
+            font-weight: 600;
+          }
+        }
+      }
+    }
   }
 }
