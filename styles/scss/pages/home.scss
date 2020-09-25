@@ -8,6 +8,7 @@ header {
   position: sticky;
   top: 0;
   border-bottom: 1px solid #e2e2e2;
+  z-index: 1;
 
   .logo-img {
     width: 105px;
@@ -53,13 +54,12 @@ main {
       .image-border {
         @include box-round(62px);
         @include simple-flex(center, center);
-        background-image: linear-gradient(
-          215deg,
-          #a60f93,
-          #cb175b,
-          #f48c47,
-          #faa647
-        );
+        background: linear-gradient(215deg, #833ab4, #fd1d1d, #fcb045);
+        position: relative;
+
+        &.live {
+          background: linear-gradient(125deg, #833ab4, #de063f);
+        }
 
         .story-img {
           border-radius: 50%;
@@ -67,6 +67,18 @@ main {
           width: calc(100% - 15%);
           height: calc(100% - 15%);
           border: 2.4px solid #fff;
+        }
+
+        .live-alert {
+          position: absolute;
+          bottom: -5px;
+          font-size: 8px;
+          color: #fff;
+          background: linear-gradient(125deg, #833ab4, #de063f 80%);
+          padding: 2px 4px;
+          border-radius: 3px;
+          border: 2px solid #fefefe;
+          letter-spacing: 1px;
         }
       }
 

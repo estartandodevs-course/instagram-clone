@@ -54,6 +54,7 @@ header {
   position: sticky;
   top: 0;
   border-bottom: 1px solid #e2e2e2;
+  z-index: 1;
 }
 header .logo-img {
   width: 105px;
@@ -98,7 +99,11 @@ main .stories-container .story-item .image-border {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-image: linear-gradient(215deg, #a60f93, #cb175b, #f48c47, #faa647);
+  background: linear-gradient(215deg, #833ab4, #fd1d1d, #fcb045);
+  position: relative;
+}
+main .stories-container .story-item .image-border.live {
+  background: linear-gradient(125deg, #833ab4, #de063f);
 }
 main .stories-container .story-item .image-border .story-img {
   border-radius: 50%;
@@ -106,6 +111,17 @@ main .stories-container .story-item .image-border .story-img {
   width: calc(100% - 15%);
   height: calc(100% - 15%);
   border: 2.4px solid #fff;
+}
+main .stories-container .story-item .image-border .live-alert {
+  position: absolute;
+  bottom: -5px;
+  font-size: 8px;
+  color: #fff;
+  background: linear-gradient(125deg, #833ab4, #de063f 80%);
+  padding: 2px 4px;
+  border-radius: 3px;
+  border: 2px solid #fefefe;
+  letter-spacing: 1px;
 }
 main .stories-container .story-item .story-author {
   color: #262626;
