@@ -90,10 +90,22 @@ main .stories-container .story-item {
   flex-direction: column;
   padding: 0 10px;
 }
-main .stories-container .story-item .story-img {
+main .stories-container .story-item .image-border {
   width: 62px;
   height: 62px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-image: linear-gradient(215deg, #a60f93, #cb175b, #f48c47, #faa647);
+}
+main .stories-container .story-item .image-border .story-img {
+  border-radius: 50%;
+  background-size: cover;
+  width: calc(100% - 15%);
+  height: calc(100% - 15%);
+  border: 2.4px solid #fff;
 }
 main .stories-container .story-item .story-author {
   color: #262626;

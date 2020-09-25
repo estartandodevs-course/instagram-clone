@@ -50,8 +50,24 @@ main {
       flex-direction: column;
       padding: 0 10px;
 
-      .story-img {
+      .image-border {
         @include box-round(62px);
+        @include simple-flex(center, center);
+        background-image: linear-gradient(
+          215deg,
+          #a60f93,
+          #cb175b,
+          #f48c47,
+          #faa647
+        );
+
+        .story-img {
+          border-radius: 50%;
+          background-size: cover;
+          width: calc(100% - 15%);
+          height: calc(100% - 15%);
+          border: 2.4px solid #fff;
+        }
       }
 
       .story-author {
