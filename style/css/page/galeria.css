@@ -1,0 +1,209 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*Extend*/
+footer, header .sub-menu ul, header form, header .barra-notificacao {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Extend*/
+/*mixins*/
+/*mixins*/
+/*Variaveis*/
+/*Variaveis*/
+/*-----Gerais-----*/
+body {
+  background-color: black;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 375px;
+  min-height: 812px;
+  background-color: #FAFAFA;
+}
+
+/*-----Gerais-----*/
+/*-----topo-----*/
+header {
+  position: sticky;
+  top: 0;
+  background: #FAFAFA;
+  padding-bottom: 7px;
+}
+header .barra-notificacao {
+  padding: 14px 21px;
+}
+header .barra-notificacao span {
+  color: #171717;
+  font-size: 15px;
+  font-weight: 600;
+}
+header .barra-notificacao .icones-barra img {
+  margin: -2px;
+}
+header form {
+  margin: 0px 10px 9px 8px;
+}
+header form input[type=text] {
+  background: url("/assets/icon/Shape.svg") no-repeat left;
+  background-position-x: 12px;
+  background-color: rgba(118, 118, 128, 0.12);
+  width: 325px;
+  height: 36px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
+  border: 0;
+  border-radius: 10px;
+}
+header form input[type=text]:focus {
+  outline: none;
+}
+header form input[type=text]::placeholder {
+  padding-left: 34px;
+}
+header form img {
+  cursor: pointer;
+}
+header .sub-menu {
+  background: #FFFFFF;
+}
+header .sub-menu ul {
+  align-items: center;
+  margin-top: 9px;
+  width: 380px;
+  overflow-x: auto;
+}
+header .sub-menu ul::-webkit-scrollbar {
+  height: 0px;
+  display: none;
+}
+header .sub-menu ul li {
+  border: 1px solid rgba(60, 60, 67, 0.18);
+  border-radius: 6px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 4px;
+  min-width: 53px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+header .sub-menu ul li:nth-of-type(1) {
+  min-width: 75px;
+  margin-left: 8px;
+}
+header .sub-menu ul li:nth-of-type(2) {
+  min-width: 77px;
+}
+header .sub-menu ul li:nth-of-type(3) {
+  min-width: 56px;
+}
+header .sub-menu ul li:nth-of-type(4) {
+  min-width: 68px;
+}
+header .sub-menu ul li:nth-of-type(5) {
+  min-width: 53px;
+}
+header .sub-menu ul li:nth-of-type(6) {
+  min-width: 53px;
+}
+header .sub-menu ul li:nth-of-type(13) {
+  min-width: 5px;
+  border: none;
+}
+header .sub-menu ul img {
+  margin: 0 5px;
+}
+
+/*-----topo-----*/
+/*-----fotos-----*/
+.fotos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.fotos::-webkit-scrollbar {
+  height: 0px;
+  display: none;
+}
+.fotos img {
+  border-bottom: 1px solid #FAFAFA;
+}
+.fotos .borda {
+  border-left: 1px solid #FAFAFA;
+  border-right: 1px solid #FAFAFA;
+}
+
+/*-----fotos-----*/
+/*-----footer-----*/
+footer {
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  background-color: #FAFAFA;
+  position: sticky;
+  bottom: 0;
+  padding: 10px 0;
+}
+footer img {
+  cursor: pointer;
+}
+
+/*-----footer-----*/
+
+/*# sourceMappingURL=galeria.css.map */

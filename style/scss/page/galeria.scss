@@ -1,0 +1,179 @@
+@import "../styles.scss";
+
+/*-----Gerais-----*/
+body{
+    background-color: black;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.container{
+    margin: $margin-alinha;
+    max-width: 375px;
+    min-height: 812px;
+    background-color: $cor-primaria;
+}
+
+/*-----Gerais-----*/
+
+/*-----topo-----*/
+
+    header{
+        position: sticky;
+        top:0;
+        background:$cor-primaria;
+        padding-bottom: 7px;
+
+        .barra-notificacao{
+            @extend %flex-alinha;
+            padding: 14px 21px;
+    
+            span{
+                color: #171717;
+                @include fontes(15px,600);
+            }
+
+            .icones-barra img{
+                margin: -2px;
+            }
+        }
+
+        form{
+            @extend %flex-alinha;
+            margin: 0px 10px 9px 8px;
+
+            input[type=text]{
+                background:url('/assets/icon/Shape.svg') no-repeat left;
+                background-position-x: 12px;
+                background-color:rgba(118, 118, 128, 0.12);
+                width: 325px;
+                height: 36px;
+                @include fontes(16px,normal);
+                line-height: 22px;
+                border: 0;
+                border-radius: 10px;
+
+                &:focus{
+                    outline: none;
+                }
+
+                &::placeholder{
+                    padding-left:34px ;
+                }
+            }
+            img{
+                cursor: pointer;
+            }
+        }
+
+        .sub-menu{
+            background: #FFFFFF;
+            ul{
+                @extend %flex-alinha;
+                align-items: $alinha-centro;
+                margin-top: 9px;
+                width: 380px;
+                overflow-x: auto;
+
+                &::-webkit-scrollbar{
+                    height: 0px;
+                    display: none;
+                }
+
+                 li{
+                    border: 1px solid rgba(60, 60, 67, 0.18);
+                    border-radius: 6px;
+                    height: 32px;
+                    display: flex;
+                    align-items: $alinha-centro;
+                    justify-content: center;
+                    margin-right: 4px;
+                    min-width: 53px;
+                    @include fontes(14px,600);
+                    cursor: pointer;
+                    
+
+                    &:nth-of-type(1){
+                        min-width: 75px;
+                        margin-left: 8px; 
+                          
+                    }
+
+                    &:nth-of-type(2){
+                        min-width: 77px;
+                        
+                    }
+
+                    &:nth-of-type(3){
+                        min-width: 56px;
+                       
+                    }
+
+                    &:nth-of-type(4){
+                        min-width: 68px;
+                        
+                    }
+
+                    &:nth-of-type(5){
+                        min-width: 53px;  
+                    }
+
+                    &:nth-of-type(6){
+                        min-width: 53px;
+                    }
+
+                    &:nth-of-type(13){
+                        min-width: 5px;
+                        border: none;
+                    }                    
+                 }
+
+                 img{
+                     margin: 0 5px;
+                 }
+            }
+        }
+    }
+/*-----topo-----*/
+
+/*-----fotos-----*/
+
+        .fotos{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin: $margin-alinha;
+            cursor: pointer;
+
+            &::-webkit-scrollbar{
+                height: 0px;
+                display: none;
+            }
+
+            img{
+                border-bottom: $pre-borda
+            }
+
+            .borda{
+                border-left: $pre-borda;
+                border-right: $pre-borda;
+            }
+        } 
+/*-----fotos-----*/
+
+/*-----footer-----*/
+
+    footer{
+        @extend %flex-alinha;
+        align-items: $alinha-centro;
+        flex-direction: row;
+        width: 100%;
+        background-color: $cor-primaria;
+        position: sticky;
+        bottom: 0;
+        padding: 10px 0;
+
+        img{
+            cursor: pointer;
+        }
+    }
+/*-----footer-----*/

@@ -1,0 +1,25 @@
+@import './reset.scss';
+
+/*Extend*/
+%flex-alinha{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Extend*/
+
+/*mixins*/
+
+@mixin fontes ( $font-tamanho: none, $font-espessura:none) {
+    font-size:$font-tamanho;
+    font-weight:$font-espessura;
+}
+
+/*mixins*/
+
+/*Variaveis*/
+$cor-primaria: #FAFAFA;
+$pre-borda: 1px solid $cor-primaria;
+$margin-alinha: 0 auto;
+$alinha-centro: center;
+/*Variaveis*/
