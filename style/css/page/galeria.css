@@ -48,18 +48,16 @@ table {
   border-spacing: 0;
 }
 
+/*Variaveis*/
+/*Variaveis*/
+/*mixins*/
+/*mixins*/
 /*Extend*/
 footer, header .sub-menu ul, header form, header .barra-notificacao {
   display: flex;
   justify-content: space-between;
 }
 
-/*Extend*/
-/*mixins*/
-/*mixins*/
-/*Variaveis*/
-/*Variaveis*/
-/*-----Gerais-----*/
 body {
   background-color: black;
   font-family: "IBM Plex Mono", monospace;
@@ -72,14 +70,13 @@ body {
   background-color: #FAFAFA;
 }
 
-/*-----Gerais-----*/
-/*-----topo-----*/
 header {
   position: sticky;
   top: 0;
-  background: #FAFAFA;
+  background: #F2F2F2;
   padding-bottom: 7px;
 }
+
 header .barra-notificacao {
   padding: 14px 21px;
 }
@@ -91,6 +88,11 @@ header .barra-notificacao span {
 header .barra-notificacao .icones-barra img {
   margin: -2px;
 }
+
+/*Extend*/
+/*-----Gerais-----*/
+/*-----Gerais-----*/
+/*-----topo-----*/
 header form {
   margin: 0px 10px 9px 8px;
 }

@@ -1,12 +1,14 @@
 @import './reset.scss';
 
-/*Extend*/
-%flex-alinha{
-    display: flex;
-    justify-content: space-between;
-}
-
-/*Extend*/
+/*Variaveis*/
+$cor-header:#F2F2F2;
+$cor-primaria: #FAFAFA;
+$pre-borda: 1px solid $cor-primaria;
+$margin-alinha: 0 auto;
+$alinha-centro: center;
+$cor-preto:#262626;
+$borda-baixo: 1px solid #A6A6AA;
+/*Variaveis*/
 
 /*mixins*/
 
@@ -17,9 +19,45 @@
 
 /*mixins*/
 
-/*Variaveis*/
-$cor-primaria: #FAFAFA;
-$pre-borda: 1px solid $cor-primaria;
-$margin-alinha: 0 auto;
-$alinha-centro: center;
-/*Variaveis*/
+/*Extend*/
+
+%flex-alinha{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+%corpo{
+    background-color: black;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+%container-Geral{
+    margin: $margin-alinha;
+    max-width: 375px;
+    min-height: 812px;
+    background-color: $cor-primaria;
+}
+
+%headers{
+    position: sticky;
+    top:0;
+    background:$cor-header;
+    padding-bottom: 7px;
+}
+
+%barra-not{
+    @extend %flex-alinha;
+    padding: 14px 21px;
+
+    span{
+        color: #171717;
+        @include fontes(15px,600);
+    }
+
+    .icones-barra img{
+        margin: -2px;
+    }
+}
+
+/*Extend*/

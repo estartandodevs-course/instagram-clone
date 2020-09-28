@@ -2,15 +2,11 @@
 
 /*-----Gerais-----*/
 body{
-    background-color: black;
-    font-family: 'IBM Plex Mono', monospace;
+    @extend %corpo;
 }
 
 .container{
-    margin: $margin-alinha;
-    max-width: 375px;
-    min-height: 812px;
-    background-color: $cor-primaria;
+    @extend %container-Geral;
 }
 
 /*-----Gerais-----*/
@@ -18,23 +14,10 @@ body{
 /*-----topo-----*/
 
     header{
-        position: sticky;
-        top:0;
-        background:$cor-primaria;
-        padding-bottom: 7px;
+        @extend %headers;
 
         .barra-notificacao{
-            @extend %flex-alinha;
-            padding: 14px 21px;
-    
-            span{
-                color: #171717;
-                @include fontes(15px,600);
-            }
-
-            .icones-barra img{
-                margin: -2px;
-            }
+            @extend %barra-not;
         }
 
         form{

@@ -1,0 +1,138 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*Variaveis*/
+/*Variaveis*/
+/*mixins*/
+/*mixins*/
+/*Extend*/
+header .opcao, header .barra-notificacao {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  background-color: black;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 375px;
+  min-height: 812px;
+  background-color: #FAFAFA;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #F2F2F2;
+  padding-bottom: 7px;
+}
+
+header .barra-notificacao {
+  padding: 14px 21px;
+}
+header .barra-notificacao span {
+  color: #171717;
+  font-size: 15px;
+  font-weight: 600;
+}
+header .barra-notificacao .icones-barra img {
+  margin: -2px;
+}
+
+/*Extend*/
+/*-----Gerais-----*/
+/*-----Gerais-----*/
+header {
+  height: 88px;
+  border-bottom: 1px solid #A6A6AA;
+}
+header .opcao {
+  margin: 6px 12px 0 12px;
+}
+header .opcao .bloco {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  height: 44px;
+}
+header .opcao .bloco:nth-of-type(2) {
+  border-bottom: 1px solid #262626;
+}
+header .opcao .bloco span {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.4);
+  margin: 11px 58px 12px 49px;
+  cursor: pointer;
+}
+header .opcao .bloco .selecionada {
+  margin: 11px 58px 12px 49px;
+  color: #262626;
+}
+
+/*-----Header-----*/
+/*-----Main-----*/
+.follow-requests {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.0001);
+  border-bottom: 1px solid #A6A6AA;
+}
+.follow-requests span {
+  font-size: 15px 400;
+  font-weight: none;
+  color: #262626;
+}
+
+/*-----Main-----*/
+
+/*# sourceMappingURL=like.css.map */

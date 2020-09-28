@@ -1,0 +1,68 @@
+@import "../styles.scss";
+
+/*-----Gerais-----*/
+body{
+    @extend %corpo;
+}
+
+.container{
+    @extend %container-Geral;
+}
+
+/*-----Gerais-----*/
+
+header{
+    @extend %headers;
+    height:88px ;
+    border-bottom: $borda-baixo;
+
+    .barra-notificacao{
+        @extend %barra-not;
+    }
+
+    .opcao{
+        @extend %flex-alinha;
+        margin: 6px 12px 0 12px;
+
+        .bloco{
+            display: flex;
+            align-items: center;
+            width: 180px;
+            height: 44px;
+
+            &:nth-of-type(2){
+                border-bottom:1px solid $cor-preto;
+            }
+
+            span{
+                @include fontes(16px,600);
+                color: rgba(0, 0, 0, 0.4);
+                margin: 11px 58px 12px 49px;
+                cursor: pointer;
+            }
+
+            .selecionada{
+                margin: 11px 58px 12px 49px;
+                color: $cor-preto;
+            }
+        } 
+    }
+}
+
+/*-----Header-----*/
+
+/*-----Main-----*/
+
+    .follow-requests{
+        padding: 15px;
+        background-color:rgba(255, 255, 255, 0.0001);
+        border-bottom: $borda-baixo;
+
+        span{
+            @include fontes(15px 400);
+            color: $cor-preto;
+        }
+    }
+
+/*-----Main-----*/
+
