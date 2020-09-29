@@ -11,11 +11,11 @@ html {
 
 *,
 p {
+  box-sizing: border-box;
   font-family: Arial;
 }
 
 body {
-  max-width: 375px;
   margin: auto;
   background-color: #fafafa;
 }
