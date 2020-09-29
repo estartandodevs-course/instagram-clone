@@ -53,14 +53,14 @@ table {
 /*mixins*/
 /*mixins*/
 /*Extend*/
-header .opcao, header .barra-notificacao {
+header .opcao, header .barra-notificacao, footer {
   display: flex;
   justify-content: space-between;
 }
 
 body {
   background-color: black;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -77,6 +77,20 @@ header {
   padding-bottom: 7px;
 }
 
+footer {
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  background-color: #FAFAFA;
+  position: sticky;
+  bottom: 0;
+  padding: 10px 0;
+  border-top: 1px solid #A6A6AA;
+}
+footer img {
+  cursor: pointer;
+}
+
 header .barra-notificacao {
   padding: 14px 21px;
 }
@@ -85,8 +99,60 @@ header .barra-notificacao span {
   font-size: 15px;
   font-weight: 600;
 }
-header .barra-notificacao .icones-barra img {
-  margin: -2px;
+
+main .this-week, main .today, main .new {
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+  border-bottom: 1px solid #A6A6AA;
+  padding-bottom: 10px;
+}
+
+main .this-week p, main .today p, main .new p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #262626;
+  margin-top: 13px;
+  margin-left: 16px;
+  margin-bottom: 21px;
+}
+
+main .this-week .descricao-02, main .this-week .descricao, main .today .descricao, main .new .descricao {
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  justify-content: space-between;
+}
+
+main .this-week .descricao-02 img, main .this-week .descricao img, main .today .descricao img, main .new .descricao img {
+  margin: 0 16px;
+}
+main .this-week .descricao-02 img:nth-of-type(1), main .this-week .descricao img:nth-of-type(1), main .today .descricao img:nth-of-type(1), main .new .descricao img:nth-of-type(1) {
+  margin-right: -39px;
+}
+
+main .this-week .descricao-02 span, main .this-week .descricao span, main .today .descricao span, main .new .descricao span {
+  font-size: 13px;
+  font-weight: 400;
+  color: #262626;
+  cursor: pointer;
+}
+main .this-week .descricao-02 span bold, main .this-week .descricao span bold, main .today .descricao span bold, main .new .descricao span bold {
+  font-weight: bold;
+}
+main .this-week .descricao-02 span b, main .this-week .descricao span b, main .today .descricao span b, main .new .descricao span b {
+  font-weight: normal;
+  color: #999999;
+}
+
+main .this-week .descricao-02 .dois, main .this-week .descricao-02 .um {
+  width: 90px;
+  height: 28px;
+  border: 1px solid rgba(60, 60, 67, 0.18);
+  border-radius: 4px;
+  margin-right: 16px;
+  margin-top: -20px;
+  cursor: pointer;
 }
 
 /*Extend*/
@@ -122,17 +188,62 @@ header .opcao .bloco .selecionada {
 
 /*-----Header-----*/
 /*-----Main-----*/
-.follow-requests {
+main .follow-requests {
   padding: 15px;
   background-color: rgba(255, 255, 255, 0.0001);
   border-bottom: 1px solid #A6A6AA;
 }
-.follow-requests span {
-  font-size: 15px 400;
-  font-weight: none;
+main .follow-requests span {
+  font-size: 15px;
+  font-weight: 400;
   color: #262626;
+}
+main .this-week .descricao span i {
+  font-style: normal;
+  color: #05386B;
+}
+main .this-week .curtir {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  margin-bottom: 23px;
+}
+main .this-week .curtir img {
+  margin-left: 74px;
+  margin-right: 14px;
+  cursor: pointer;
+}
+main .this-week .curtir b {
+  font-size: 11px;
+  font-weight: 600;
+  color: #999999;
+}
+main .this-week .descricao-02:nth-of-type(5) {
+  margin-bottom: -19px;
+}
+main .this-week .descricao-02 img {
+  margin-bottom: 16px;
+}
+main .this-week .descricao-02 img:nth-of-type(1) {
+  margin-right: -60px;
+}
+main .this-week .descricao-02 span {
+  margin-top: -20px;
+}
+main .this-week .descricao-02 .um {
+  font-size: 14px;
+  font-weight: 600;
+  color: #262626;
+  background: #FFFFFF;
+}
+main .this-week .descricao-02 .dois {
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: #3797EF;
 }
 
 /*-----Main-----*/
+/*-----footer-----*/
 
 /*# sourceMappingURL=like.css.map */

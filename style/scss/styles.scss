@@ -8,6 +8,7 @@ $margin-alinha: 0 auto;
 $alinha-centro: center;
 $cor-preto:#262626;
 $borda-baixo: 1px solid #A6A6AA;
+$fundo-like:#FFFFFF;
 /*Variaveis*/
 
 /*mixins*/
@@ -15,6 +16,12 @@ $borda-baixo: 1px solid #A6A6AA;
 @mixin fontes ( $font-tamanho: none, $font-espessura:none) {
     font-size:$font-tamanho;
     font-weight:$font-espessura;
+}
+
+@mixin fontes-cor ($font-t: none, $font-e:none,$font-c:none){
+    font-size:$font-t;
+    font-weight:$font-e;
+    color: $font-c;
 }
 
 /*mixins*/
@@ -29,7 +36,7 @@ $borda-baixo: 1px solid #A6A6AA;
 
 %corpo{
     background-color: black;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Roboto', sans-serif;
 }
 
 %container-Geral{
@@ -46,6 +53,22 @@ $borda-baixo: 1px solid #A6A6AA;
     padding-bottom: 7px;
 }
 
+%foters{
+    @extend %flex-alinha;
+    align-items: $alinha-centro;
+    flex-direction: row;
+    width: 100%;
+    background-color: $cor-primaria;
+    position: sticky;
+    bottom: 0;
+    padding: 10px 0;
+    border-top: $borda-baixo;
+
+    img{
+            cursor: pointer;
+    }
+}
+
 %barra-not{
     @extend %flex-alinha;
     padding: 14px 21px;
@@ -54,10 +77,60 @@ $borda-baixo: 1px solid #A6A6AA;
         color: #171717;
         @include fontes(15px,600);
     }
+}
 
-    .icones-barra img{
-        margin: -2px;
+%container-follow{
+    display: flex;
+    flex-direction: column;
+    color: $fundo-like;
+    border-bottom: $borda-baixo;
+    padding-bottom: 10px;
+}
+
+%titulo-follow{
+    @include fontes-cor(15px,600,$cor-preto);
+    margin-top: 13px;
+    margin-left: 16px; 
+    margin-bottom: 21px;
+}
+
+%descricao{
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-between;
+}
+
+%img-follow{
+    margin: 0 16px;
+
+        &:nth-of-type(1){
+            margin-right: -39px;
+        }
+}
+
+%span-follow{
+    @include fontes-cor(13px, 400,$cor-preto);
+    cursor: pointer;
+
+    bold{
+        font-weight: bold;
     }
+    
+    b{
+        font-weight: normal;
+        color: #999999;
+    }
+}
+
+%botao{
+    width: 90px;
+    height: 28px;
+    border: 1px solid rgba(60, 60, 67, 0.18);
+    border-radius: 4px;
+    margin-right: 16px;
+    margin-top: -20px;
+    cursor: pointer;
 }
 
 /*Extend*/

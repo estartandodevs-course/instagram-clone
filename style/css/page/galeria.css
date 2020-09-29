@@ -60,7 +60,7 @@ footer, header .sub-menu ul, header form, header .barra-notificacao {
 
 body {
   background-color: black;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -84,9 +84,6 @@ header .barra-notificacao span {
   color: #171717;
   font-size: 15px;
   font-weight: 600;
-}
-header .barra-notificacao .icones-barra img {
-  margin: -2px;
 }
 
 /*Extend*/
