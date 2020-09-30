@@ -9,8 +9,9 @@ header {
   top: 0;
   border-bottom: 1px solid #e2e2e2;
   z-index: 1;
+  box-sizing: border-box;
 
-  @media ($mobile-breakpoint) {
+  @media ($desktop-breakpoint) {
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -24,20 +25,56 @@ header {
     @extend %action-icons;
 
     &.camera-icon {
-      @media ($mobile-breakpoint) {
+      @media ($desktop-breakpoint) {
         display: none;
+      }
+    }
+  }
+
+  .search-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+    border: solid 1px #dbdbdb;
+    padding: 5px 80px;
+
+    @media ($desktop-breakpoint) {
+      display: flex;
+    }
+
+    .search-icon {
+      width: 10px;
+      height: 10px;
+      margin-right: 6px;
+    }
+
+    .search-input {
+      width: 70px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+
+      &::placeholder {
+        text-align: center;
       }
     }
   }
 }
 
-main {
-  @include simple-flex(flex-start, center, column);
-  max-width: 975px;
+.page-container {
+  display: flex;
+  padding: 30px;
   margin: auto;
 
-  .main-content {
-    max-width: 615px;
+  main {
+    @include simple-flex(flex-start, center, column);
+
+    @media ($huge-breakpoint) {
+      padding-right: 30px;
+      max-width: 614px;
+      margin-left: auto;
+    }
 
     .stories-container {
       display: flex;
@@ -45,6 +82,11 @@ main {
       max-width: 100vw;
       overflow-x: auto;
       padding: 9px 0 8px;
+
+      @media ($desktop-breakpoint) {
+        border: $border-box;
+        margin-bottom: 24px;
+      }
 
       &::-webkit-scrollbar {
         height: 6px;
@@ -73,10 +115,6 @@ main {
           background: linear-gradient(215deg, #833ab4, #fd1d1d, #fcb045);
           position: relative;
 
-          @media ($mobile-breakpoint) {
-            @include box-round(68px);
-          }
-
           &.live {
             background: linear-gradient(125deg, #833ab4, #de063f);
           }
@@ -84,8 +122,8 @@ main {
           .story-img {
             border-radius: 50%;
             background-size: cover;
-            width: 90%;
-            height: 90%;
+            width: calc(100% - 15%);
+            height: calc(100% - 15%);
             border: 2.4px solid #fff;
           }
 
@@ -122,6 +160,10 @@ main {
       display: flex;
       flex-direction: column;
       width: 100%;
+
+      @media ($desktop-breakpoint) {
+        border: $border-box;
+      }
 
       .card-post {
         display: flex;
@@ -219,6 +261,20 @@ main {
           }
         }
       }
+    }
+  }
+
+  aside {
+    display: none;
+    max-width: 293px;
+    margin-right: auto;
+
+    @media ($huge-breakpoint) {
+      display: flex;
+    }
+
+    p {
+      color: black;
     }
   }
 }

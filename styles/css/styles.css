@@ -11,12 +11,10 @@ html {
 
 *,
 p {
-  box-sizing: border-box;
   font-family: Arial;
 }
 
 body {
-  margin: auto;
   background-color: #fafafa;
 }
 
@@ -38,6 +36,11 @@ body {
   bottom: 0;
   padding: 10px 0;
   border-top: 1px solid #e2e2e2;
+}
+@media (min-width: 768px) {
+  .tab-bar {
+    display: none;
+  }
 }
 .tab-bar .action-icon {
   width: 22px;
