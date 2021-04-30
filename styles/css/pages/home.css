@@ -64,11 +64,32 @@ header .action-icon {
 .stories-container .story-item {
   text-align: center;
 }
-.stories-container .story-item .story-img {
-  margin-bottom: 8px;
+.stories-container .story-item .content-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(215deg, blue 10%, #fd1d1d, #fcb045);
+  position: relative;
+  margin-bottom: 5px;
+}
+.stories-container .story-item .content-img .story-img {
+  border: 2px solid #fff;
   width: 56px;
   height: 56px;
   border-radius: 50%;
+  background-size: cover;
+}
+.stories-container .story-item .content-img .alert-live {
+  bottom: -3px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  position: absolute;
+  border: 1px solid #fff;
+  color: #fff;
+  background: linear-gradient(215deg, #833ab4, #fd1d1d, #fcb045);
 }
 
 .feed-container {
@@ -90,6 +111,7 @@ header .action-icon {
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  background-size: cover;
 }
 .feed-container .card-post .card-header .author-infos .author-name {
   font-weight: 600;
@@ -133,6 +155,7 @@ header .action-icon {
   width: 17px;
   height: 17px;
   border-radius: 50%;
+  background-size: cover;
   margin-right: 6.5px;
 }
 .feed-container .card-post .post-infos .likes-info .likes-quantity {

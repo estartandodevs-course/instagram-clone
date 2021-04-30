@@ -40,10 +40,29 @@ header {
 
   .story-item {
     text-align: center;
-
-    .story-img {
-      margin-bottom: 8px;
-      @include box-round(56px);
+    .content-img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(215deg, blue 10%, #fd1d1d, #fcb045);
+      position: relative;
+      margin-bottom: 5px;
+      .story-img {
+        border: 2px solid #fff;
+        @include box-round(56px);
+      }
+      .alert-live {
+        bottom: -3px;
+        padding: 2px 4px;
+        border-radius: 3px;
+        position: absolute;
+        border: 1px solid #fff;
+        color: $highlight-contrast-color;
+        background: linear-gradient(215deg, #833ab4, #fd1d1d, #fcb045);
+      }
     }
   }
 }
