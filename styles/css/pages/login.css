@@ -3,26 +3,18 @@
   padding: 0;
 }
 
-body,
-html {
+html,
+body {
   height: 100%;
   width: 100%;
 }
 
-*,
-p {
+* {
   font-family: Arial;
 }
 
-body {
-  background-color: #fafafa;
-}
-
-.tab-bar .action-icon {
-  width: 24px;
-  height: auto;
-  cursor: pointer;
-  margin: 0 15px;
+html {
+  font-size: 10px;
 }
 
 .tab-bar {
@@ -31,19 +23,12 @@ body {
   align-items: center;
   flex-direction: row;
   width: 100%;
+  min-height: 50px;
   background-color: #f2f2f2;
   position: sticky;
   bottom: 0;
-  padding: 10px 0;
-  border-top: 1px solid #e2e2e2;
-}
-@media (min-width: 768px) {
-  .tab-bar {
-    display: none;
-  }
-}
-.tab-bar .action-icon {
-  width: 22px;
+  padding: 0 26px;
+  box-sizing: border-box;
 }
 
 .login-container {
@@ -54,75 +39,55 @@ body {
   height: 100%;
   margin: 0 16px;
 }
-@media (min-width: 768px) {
-  .login-container {
-    flex-direction: row;
-  }
-}
-.login-container .mockup-insta {
-  display: none;
-}
-@media (min-width: 768px) {
-  .login-container .mockup-insta {
-    display: block;
-  }
-}
 .login-container .form-container {
-  width: 100%;
-  padding: 39px 0;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  max-width: 350px;
-}
-@media (min-width: 768px) {
-  .login-container .form-container {
-    border: 1px solid #dbdbdb;
-    margin: 0 40px;
-    padding: 30px 50px;
-  }
+  flex-direction: column;
+  width: 100%;
 }
 .login-container .form-container .logo-img {
-  width: 180px;
+  width: 182px;
   height: auto;
-  padding-bottom: 39px;
+  margin-bottom: 39px;
 }
 .login-container .form-container .input-form {
+  font-size: 1.4rem;
   width: 100%;
   height: 44px;
   margin: 6px 0;
   padding: 0 15px;
-  background-color: #f2f2f2;
-  border: 0.5px solid #0000001a;
-  border-radius: 5px;
   box-sizing: border-box;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: #fafafa;
+  color: #262626;
 }
 .login-container .form-container .input-form:focus {
   outline: none;
 }
+.login-container .form-container .input-form::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
 .login-container .form-container .forgot-password {
-  font-family: Arial;
-  cursor: pointer;
-  font-size: 12px;
-  margin: 19px 0;
+  color: #3797ef;
+  font-size: 1.2rem;
+  margin-top: 13px;
+  font-weight: 500;
   text-decoration: none;
   align-self: flex-end;
-  color: #3797ef;
 }
 .login-container .form-container .link-submit {
   width: 100%;
 }
 .login-container .form-container .link-submit .btn-submit {
-  cursor: pointer;
   width: 100%;
   height: 44px;
-  color: #ffffff;
   background-color: #3797ef;
   border: none;
   border-radius: 5px;
-}
-.login-container .form-container .link-submit .btn-submit:focus {
-  outline: none;
+  color: #fff;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=login.css.map */

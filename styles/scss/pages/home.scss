@@ -3,18 +3,10 @@
 header {
   @include simple-flex(space-between, center, row);
   width: 100%;
-  padding: 10px 0 6px;
+  min-height: 44px;
   background-color: $background-secondary;
-  position: sticky;
-  top: 0;
-  border-bottom: 1px solid #e2e2e2;
-  z-index: 1;
+  padding: 10px 10px;
   box-sizing: border-box;
-
-  @media ($desktop-breakpoint) {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
 
   .logo-img {
     width: 105px;
@@ -22,259 +14,120 @@ header {
   }
 
   .action-icon {
-    @extend %action-icons;
+    width: 24px;
+    height: auto;
+    cursor: pointer;
+  }
+}
 
-    &.camera-icon {
-      @media ($desktop-breakpoint) {
-        display: none;
-      }
-    }
+.stories-container {
+  display: flex;
+  padding: 9px 10px;
+  gap: 20px;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 
-  .search-container {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background: #fafafa;
-    border: solid 1px #dbdbdb;
-    padding: 5px 80px;
+  // &::-webkit-scrollbar-track {
+  //   background-color: brown;
+  // }
 
-    @media ($desktop-breakpoint) {
-      display: flex;
-    }
+  // &::-webkit-scrollbar-thumb {
+  //   background-color: burlywood;
+  // }
 
-    .search-icon {
-      width: 10px;
-      height: 10px;
-      margin-right: 6px;
-    }
+  .story-item {
+    text-align: center;
 
-    .search-input {
-      width: 70px;
-      background-color: transparent;
-      border: none;
-      outline: none;
-
-      &::placeholder {
-        text-align: center;
-      }
+    .story-img {
+      margin-bottom: 8px;
+      @include box-round(56px);
     }
   }
 }
 
-.page-container {
+.feed-container {
   display: flex;
-  padding: 30px;
-  margin: auto;
+  flex-direction: column;
+  width: 100%;
 
-  main {
-    @include simple-flex(flex-start, center, column);
+  .card-post {
+    display: flex;
+    flex-direction: column;
 
-    @media ($huge-breakpoint) {
-      padding-right: 30px;
-      max-width: 614px;
-      margin-left: auto;
-    }
-
-    .stories-container {
+    .card-header {
       display: flex;
-      width: 100%;
-      max-width: 100vw;
-      overflow-x: auto;
-      padding: 9px 0 8px;
+      align-items: center;
+      padding: 11px 10px;
+      gap: 10px;
 
-      @media ($desktop-breakpoint) {
-        border: $border-box;
-        margin-bottom: 24px;
+      .author-img {
+        @include box-round(32px);
       }
 
-      &::-webkit-scrollbar {
-        height: 6px;
-        display: none;
-      }
-
-      /* Track */
-      &::-webkit-scrollbar-track {
-        background-color: $background-secondary;
-      }
-
-      /* Handle */
-      &::-webkit-scrollbar-thumb {
-        background: #c7c7c7;
-        border-radius: 5px;
-      }
-
-      .story-item {
-        display: flex;
-        flex-direction: column;
-        padding: 0 10px;
-
-        .image-border {
-          @include box-round(62px);
-          @include simple-flex(center, center);
-          background: linear-gradient(215deg, #833ab4, #fd1d1d, #fcb045);
-          position: relative;
-
-          &.live {
-            background: linear-gradient(125deg, #833ab4, #de063f);
-          }
-
-          .story-img {
-            border-radius: 50%;
-            background-size: cover;
-            width: calc(100% - 15%);
-            height: calc(100% - 15%);
-            border: 2.4px solid #fff;
-          }
-
-          .live-alert {
-            position: absolute;
-            bottom: -5px;
-            font-size: 8px;
-            color: #fff;
-            background: linear-gradient(125deg, #833ab4, #de063f 80%);
-            padding: 2px 4px;
-            border-radius: 3px;
-            border: 2px solid #fefefe;
-            letter-spacing: 1px;
-          }
+      .author-infos {
+        .author-name {
+          font-weight: 600;
+          font-size: 1.3rem;
+          margin-bottom: 1.5px;
         }
 
-        .story-author {
-          color: $text-color;
-          font-size: 12px;
-          font-family: Arial;
-          text-align: center;
-          margin-top: 5px;
+        .author-location {
+          font-size: 1.1rem;
         }
       }
 
-      @media screen and (min-width: 768px) {
-        &::-webkit-scrollbar {
-          display: none;
-        }
+      .more-icon {
+        cursor: pointer;
+        margin-left: auto;
+        height: 3px;
       }
     }
 
-    .feed-container {
-      display: flex;
-      flex-direction: column;
+    .post-img {
       width: 100%;
+      height: 375px;
+      object-fit: cover;
+    }
 
-      @media ($desktop-breakpoint) {
-        border: $border-box;
-      }
+    .post-infos {
+      padding: 12px 15px;
 
-      .card-post {
+      .post-actions {
         display: flex;
-        flex-direction: column;
-        padding: 10px 0;
+        gap: 15px;
 
-        .card-header {
-          display: flex;
-          padding: 11px 10px;
+        .action-icon {
+          height: 20px;
+          width: auto;
+          cursor: pointer;
 
-          .author-img {
-            @include box-round(32px);
-          }
-
-          .author-infos {
-            margin-left: 10px;
-
-            .author-name {
-              font-weight: 600;
-              font-size: 13px;
-              margin-bottom: 2px;
-            }
-
-            .author-location {
-              font-size: 11px;
-            }
-          }
-
-          .more-icon {
-            cursor: pointer;
-            height: 4px;
-            align-self: center;
+          &:last-child {
             margin-left: auto;
           }
         }
+      }
 
-        .post-img {
-          width: 100%;
-          min-height: 375px;
-          height: 100%;
-          max-height: 100%;
-          object-fit: cover;
+      .likes-info {
+        display: flex;
+        align-items: center;
+        padding: 12px 0 5px;
+
+        .people-like-img {
+          @include box-round(17px);
+          margin-right: 6.5px;
         }
 
-        .post-infos {
-          padding: 13px 15px 10px;
-
-          .post-actions {
-            display: flex;
-
-            .action-icon {
-              width: auto;
-              height: 20px;
-              cursor: pointer;
-              margin: 0 8px;
-
-              &:first-child {
-                margin-left: 0;
-              }
-
-              &:last-child {
-                margin-left: auto;
-                margin-right: 0;
-              }
-            }
-          }
-
-          .likes-info {
-            display: flex;
-            align-items: center;
-            padding: 10px 0 6px;
-
-            .people-like-img {
-              @include box-round(17px);
-            }
-
-            .likes-quantity {
-              margin-left: 6px;
-              font-size: 13px;
-              font-family: Arial;
-
-              .text-bold {
-                font-weight: 600;
-              }
-            }
-          }
-
-          .post-caption {
-            font-size: 13px;
-            font-family: Arial;
-
-            .author-name {
-              font-weight: 600;
-            }
-          }
+        .likes-quantity {
+          font-size: 1.3rem;
         }
       }
-    }
-  }
 
-  aside {
-    display: none;
-    max-width: 293px;
-    margin-right: auto;
-
-    @media ($huge-breakpoint) {
-      display: flex;
-    }
-
-    p {
-      color: black;
+      .post-caption {
+        font-size: 1.3rem;
+      }
     }
   }
 }

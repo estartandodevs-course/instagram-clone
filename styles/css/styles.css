@@ -3,26 +3,18 @@
   padding: 0;
 }
 
-body,
-html {
+html,
+body {
   height: 100%;
   width: 100%;
 }
 
-*,
-p {
+* {
   font-family: Arial;
 }
 
-body {
-  background-color: #fafafa;
-}
-
-.tab-bar .action-icon {
-  width: 24px;
-  height: auto;
-  cursor: pointer;
-  margin: 0 15px;
+html {
+  font-size: 10px;
 }
 
 .tab-bar {
@@ -31,19 +23,12 @@ body {
   align-items: center;
   flex-direction: row;
   width: 100%;
+  min-height: 50px;
   background-color: #f2f2f2;
   position: sticky;
   bottom: 0;
-  padding: 10px 0;
-  border-top: 1px solid #e2e2e2;
-}
-@media (min-width: 768px) {
-  .tab-bar {
-    display: none;
-  }
-}
-.tab-bar .action-icon {
-  width: 22px;
+  padding: 0 26px;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=styles.css.map */
