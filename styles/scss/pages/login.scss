@@ -58,5 +58,25 @@
         margin-top: 30px;
       }
     }
+    .social-midia {
+      @include simple-flex();
+      margin-top: 37px;
+      width: 16.9rem;
+      height: 1.8rem;
+      cursor: pointer;
+      .social-midia__img {
+        margin-right: 10px;
+        width: 1.7rem;
+        height: 1.7rem;
+      }
+      .social-mida__text {
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.67rem;
+        letter-spacing: -0.15px;
+        align-self: center;
+        color: $highlight-color;
+      }
+    }
   }
 }

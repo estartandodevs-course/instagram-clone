@@ -89,5 +89,28 @@ html {
   color: #fff;
   margin-top: 30px;
 }
+.login-container .form-container .social-midia {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-top: 37px;
+  width: 16.9rem;
+  height: 1.8rem;
+  cursor: pointer;
+}
+.login-container .form-container .social-midia .social-midia__img {
+  margin-right: 10px;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.login-container .form-container .social-midia .social-mida__text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.67rem;
+  letter-spacing: -0.15px;
+  align-self: center;
+  color: #3797ef;
+}
 
 /*# sourceMappingURL=login.css.map */
