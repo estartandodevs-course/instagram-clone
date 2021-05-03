@@ -1,0 +1,67 @@
+@import "../styles.scss";
+
+.search {
+  width: 100%;
+  min-height: 88px;
+  background: $background-primary;
+  .search__container {
+    @include simple-flex(space-between, center, row);
+    padding: 20px 8px 10px;
+
+    .search-input {
+      @include simple-flex(flex-start, center, row);
+      width: 327px;
+      height: 36px;
+      border-radius: 10px;
+      background: $search-background;
+      p {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        letter-spacing: -0.3px;
+        color: $search-text;
+      }
+      img {
+        width: 13.68px;
+        height: 13.68px;
+        margin: 11px;
+        color: $search-text;
+      }
+    }
+
+    .search-shape {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+    }
+  }
+
+  .tags__container {
+    display: flex;
+    padding: 10px;
+    gap: 6px;
+
+    .tags-style {
+      @include simple-flex(center, center, row);
+
+      width: 75px;
+      height: 32px;
+      border: 1px solid $search-background;
+      border-radius: 6px;
+      background: $highlight-contrast-color;
+
+      img {
+        color: $text-color;
+        width: 12.5px;
+        height: 14.78px;
+        margin-right: 6px;
+      }
+      p {
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.67rem;
+        letter-spacing: -0.2px;
+      }
+    }
+  }
+}
