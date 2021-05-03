@@ -65,3 +65,18 @@
     }
   }
 }
+
+.photos {
+  width: 100%;
+  .photos___container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    img {
+      width: 124px;
+      height: 119,53px;
+    }
+  }
+  
+
+}

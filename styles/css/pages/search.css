@@ -100,4 +100,17 @@ html {
   letter-spacing: -0.2px;
 }
 
+.photos {
+  width: 100%;
+}
+.photos .photos___container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+.photos .photos___container img {
+  width: 124px;
+  height: 119, 53px;
+}
+
 /*# sourceMappingURL=search.css.map */
