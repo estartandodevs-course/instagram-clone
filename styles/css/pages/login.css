@@ -37,7 +37,21 @@ html {
   align-items: center;
   flex-direction: column;
   height: 100%;
-  margin: 0 16px;
+}
+@media (min-width: 768px) {
+  .login-container {
+    flex-direction: row;
+    gap: 40px;
+    background-color: #f2f2f2;
+  }
+}
+.login-container .insta-mock {
+  display: none;
+}
+@media (min-width: 768px) {
+  .login-container .insta-mock {
+    display: block;
+  }
 }
 .login-container .form-container {
   display: flex;
@@ -45,6 +59,16 @@ html {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  padding: 0px 16px;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .login-container .form-container {
+    max-width: 350px;
+    background-color: #fafafa;
+    padding: 30px 40px;
+    border: 1px solid #dbdbdb;
+  }
 }
 .login-container .form-container .logo-img {
   width: 182px;

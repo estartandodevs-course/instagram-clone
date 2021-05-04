@@ -3,11 +3,33 @@
 .login-container {
   @include simple-flex(center, center, column);
   height: 100%;
-  margin: 0 16px;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    gap: 40px;
+    background-color: $background-secondary;
+  }
+
+  .insta-mock {
+    display: none;
+
+    @media (min-width: $breakpoint-tablet) {
+      display: block;
+    }
+  }
 
   .form-container {
     @include simple-flex(center, center, column);
     width: 100%;
+    padding: 0px 16px;
+    box-sizing: border-box;
+
+    @media (min-width: $breakpoint-tablet) {
+      max-width: 350px;
+      background-color: $background-primary;
+      padding: 30px 40px;
+      border: 1px solid rgba(219, 219, 219, 1);
+    }
 
     .logo-img {
       width: 182px;
