@@ -1,5 +1,11 @@
 @import "../styles.scss";
 
+body {
+  @media (min-width: $breakpoint-tablet) {
+    background-color: $background-secondary;
+  }
+}
+
 header {
   @include simple-flex(space-between, center, row);
   width: 100%;
@@ -7,6 +13,10 @@ header {
   background-color: $background-secondary;
   padding: 10px 10px;
   box-sizing: border-box;
+
+  @media (min-width: $breakpoint-tablet) {
+    background-color: $background-primary;
+  }
 
   .logo-img {
     width: 105px;
@@ -20,134 +30,225 @@ header {
   }
 }
 
-.stories-container {
+main {
   display: flex;
-  padding: 9px 10px;
-  gap: 20px;
-  overflow-x: auto;
+  max-width: 935px;
+  margin: auto;
+  gap: 28px;
 
-  &::-webkit-scrollbar {
-    display: none;
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 30px;
   }
 
-  // &::-webkit-scrollbar-track {
-  //   background-color: brown;
-  // }
-
-  // &::-webkit-scrollbar-thumb {
-  //   background-color: burlywood;
-  // }
-
-  .story-item {
-    text-align: center;
-    .content-img {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
+  .page-container {
+    .stories-container {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(215deg, blue 10%, #fd1d1d, #fcb045);
-      position: relative;
-      margin-bottom: 5px;
+      padding: 9px 10px;
+      gap: 20px;
+      overflow-x: auto;
+      box-sizing: border-box;
 
-      .story-img {
-        border: 2px solid #fff;
-        @include box-round(56px);
+      @media (min-width: $breakpoint-tablet) {
+        border: 1px solid rgba(219, 219, 219, 1);
+        background-color: $background-primary;
+        margin-bottom: 24px;
       }
 
-      .alert-live {
-        bottom: -3px;
-        padding: 2px 4px;
-        border-radius: 3px;
-        position: absolute;
-        border: 1px solid #fff;
-        color: $highlight-contrast-color;
-        background: linear-gradient(215deg, #833ab4, #fd1d1d, #fcb045);
-      }
-    }
-  }
-}
-
-.feed-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-
-  .card-post {
-    display: flex;
-    flex-direction: column;
-
-    .card-header {
-      display: flex;
-      align-items: center;
-      padding: 11px 10px;
-      gap: 10px;
-
-      .author-img {
-        @include box-round(32px);
+      &::-webkit-scrollbar {
+        display: none;
       }
 
-      .author-infos {
-        .author-name {
-          font-weight: 600;
-          font-size: 1.3rem;
-          margin-bottom: 1.5px;
-        }
+      .story-item {
+        text-align: center;
+        .content-img {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: linear-gradient(215deg, blue 10%, #fd1d1d, #fcb045);
+          position: relative;
+          margin-bottom: 5px;
 
-        .author-location {
-          font-size: 1.1rem;
-        }
-      }
+          .story-img {
+            border: 2px solid #fff;
+            @include box-round(56px);
+          }
 
-      .more-icon {
-        cursor: pointer;
-        margin-left: auto;
-        height: 3px;
-      }
-    }
-
-    .post-img {
-      width: 100%;
-      height: 375px;
-      object-fit: cover;
-    }
-
-    .post-infos {
-      padding: 12px 15px;
-
-      .post-actions {
-        display: flex;
-        gap: 15px;
-
-        .action-icon {
-          height: 20px;
-          width: auto;
-          cursor: pointer;
-
-          &:last-child {
-            margin-left: auto;
+          .alert-live {
+            bottom: -3px;
+            padding: 2px 4px;
+            border-radius: 3px;
+            position: absolute;
+            border: 1px solid #fff;
+            color: $highlight-contrast-color;
+            background: linear-gradient(215deg, #833ab4, #fd1d1d, #fcb045);
           }
         }
       }
+    }
 
-      .likes-info {
-        display: flex;
-        align-items: center;
-        padding: 12px 0 5px;
+    .feed-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      box-sizing: border-box;
 
-        .people-like-img {
-          @include box-round(17px);
-          margin-right: 6.5px;
-        }
-
-        .likes-quantity {
-          font-size: 1.3rem;
-        }
+      @media (min-width: $breakpoint-tablet) {
+        gap: 60px;
+        margin-bottom: 60px;
       }
 
-      .post-caption {
-        font-size: 1.3rem;
+      .card-post {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: $breakpoint-tablet) {
+          border: 1px solid rgba(219, 219, 219, 1);
+          background-color: $background-primary;
+        }
+
+        .card-header {
+          display: flex;
+          align-items: center;
+          padding: 11px 10px;
+          gap: 10px;
+
+          .author-img {
+            @include box-round(32px);
+          }
+
+          .author-infos {
+            .author-name {
+              font-weight: 600;
+              font-size: 1.3rem;
+              margin-bottom: 1.5px;
+            }
+
+            .author-location {
+              font-size: 1.1rem;
+            }
+          }
+
+          .more-icon {
+            cursor: pointer;
+            margin-left: auto;
+            height: 3px;
+          }
+        }
+
+        .post-img {
+          width: 100%;
+          height: 375px;
+          object-fit: cover;
+        }
+
+        .post-infos {
+          padding: 12px 15px;
+
+          .post-actions {
+            display: flex;
+            gap: 15px;
+
+            .action-icon {
+              height: 20px;
+              width: auto;
+              cursor: pointer;
+
+              &:last-child {
+                margin-left: auto;
+              }
+            }
+          }
+
+          .likes-info {
+            display: flex;
+            align-items: center;
+            padding: 12px 0 5px;
+
+            .people-like-img {
+              @include box-round(17px);
+              margin-right: 6.5px;
+            }
+
+            .likes-quantity {
+              font-size: 1.3rem;
+            }
+          }
+
+          .post-caption {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+
+  .aside-container {
+    @include simple-flex(flex-start, flex-start, column);
+    min-width: 300px;
+
+    .user-infos {
+      @include simple-flex(flex-start, center);
+      width: 100%;
+      margin-bottom: 20px;
+
+      img {
+        @include box-round(56px);
+        margin-right: 15px;
+      }
+
+      .user-name {
+        font-weight: 600;
+        font-size: 1.4rem;
+        margin-bottom: 1.5px;
+      }
+
+      .user-fullname {
+        color: #8e8e8e;
+        font-size: 1.4rem;
+      }
+
+      .logout-action {
+        @include action;
+        margin-left: auto;
+      }
+    }
+
+    .suggestions-container {
+      @include simple-flex(flex-start, flex-start, column);
+      width: 100%;
+
+      .suggestion-title {
+        color: #8e8e8e;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .suggestion {
+        @include simple-flex(flex-start, center);
+        width: 100%;
+        margin-bottom: 10px;
+
+        img {
+          @include box-round(32px);
+          margin-right: 15px;
+        }
+
+        .follow-action {
+          @include action;
+          margin-left: auto;
+        }
+
+        .suggestion-name {
+          font-size: 1.4rem;
+        }
+
+        .suggestion-common-followers {
+          color: #8e8e8e;
+          font-size: 1.2rem;
+        }
       }
     }
   }

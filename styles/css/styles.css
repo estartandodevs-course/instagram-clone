@@ -30,5 +30,10 @@ html {
   padding: 0 26px;
   box-sizing: border-box;
 }
+@media (min-width: 768px) {
+  .tab-bar {
+    background-color: #fafafa;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

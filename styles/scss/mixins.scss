@@ -11,3 +11,9 @@
   border-radius: 50%;
   background-size: cover;
 }
+
+@mixin action() {
+  color: #0095f6;
+  font-weight: 600;
+  text-decoration: none;
+}

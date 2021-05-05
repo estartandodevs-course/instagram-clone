@@ -19,4 +19,8 @@ html {
   bottom: 0;
   padding: 0 26px;
   box-sizing: border-box;
+
+  @media (min-width: $breakpoint-tablet) {
+    background-color: $background-primary;
+  }
 }
